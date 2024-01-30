@@ -1,0 +1,22 @@
+name: Lint Commit Messages
+on:
+  # feature 브랜치에 push 할 때
+  push:
+    branches:
+      - feature/**
+
+  # develop, master/main 브랜치로 PR 할 때
+  pull_request:
+    branches:
+      - develop
+      - master
+      - main
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v5
