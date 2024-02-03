@@ -20,6 +20,7 @@ trim_trailing_whitespace = true
 # 마크다운 파일
 [*.md]
 trim_trailing_whitespace = false
+indent_size = 4
 
 # Python
 [*.{ini,py,py.tpl,rst}]
